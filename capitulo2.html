@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capítulo 2</title>
+    <style>
+        header {
+            background: #0082c7;
+        }
+
+
+        .cabecalho {
+            background: #0082c7;
+        }
+
+        .secao{
+            display:block;
+        }
+
+
+        @media (min-width:800px){
+            .secao{
+                display:inline-block;
+                width: 45%;
+            }
+        }
+
+
+        @media (min-width:650px){
+
+            .baleia{
+                display:inline-block;
+            }
+        }
+
+        .contexto{
+            width: 90%;
+            width: 50%;
+        }
+
+        .elemento{
+            font-style: 1.5vw;
+        }
+
+        .cartao{
+            display: inline-block;
+            width: 190px;
+        }
+        .mural{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Ceep</h1>
+        <nav></nav>
+    </header>
+    <div class="contexto">
+        <div class="elemento">Oi</div>
+    </div>
+    <div class="cartao"></div>
+    <section class="mural">
+        <div class="cartao">...</div>
+        <div class="cartao">...</div>
+        <div class="cartao">...</div>
+        <div class="cartao">...</div>
+        <div class="cartao">...</div>
+        <div class="cartao">...</div>
+    </section>
+</body>
+
+</html>

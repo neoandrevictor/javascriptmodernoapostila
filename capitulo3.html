@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capítulo 3</title>
+    <style>
+        .mural{
+           flex-direction: column;
+
+
+        }
+
+        .cartao{
+            flex-basis: auto;
+            width: auto;
+            display: block;
+        }
+
+        #botaoMudaLayout:active + .mural{
+            flex-direction: column;
+        }
+
+        #botaoMudaLayout:active + .mural .cartao{
+            flex-basis: auto;
+            width: auto;
+            display: auto;
+        }
+
+        .mural--linhas{
+            flex-direction: column;
+            /* propriedades modificadas*/
+        }
+
+        .mural--linhas .cartao{
+            flex-direction: auto;
+            width: auto;
+            display: block;
+        }
+
+
+        .cartao--some{
+            opacity: 0;
+            transition: .2s ease-in;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho-logo">Ceep</h1>
+        <button id="botaoMudaLayout">Muda Layout</button>
+    </header>
+    <section class="mural">
+        <div class="cartao"></div>
+        <div class="cartao"></div>
+    </section>
+    <button id="botaoMudaLayout">Muda Layout</button>
+    <section class="mural">
+        <div class="cartao"></div>
+        <div class="cartao"></div>
+    </section>
+
+    <button class="mudaLayout" onclick="alerta();">Linhas</button>
+
+    <div class="cartao">
+        <div class="opcoesDoCartao"><button class="opcoesDoCartao-remove"></button>
+        <p class="cartao-conteudo">Lorem...</p>
+        </div>
+    </div>
+
+    <div class="cartao" id="cartao_1"></div>
+
+    <script>
+        //criando um array
+        var valores=[4,8.9,true,"oi!"];
+
+        //pegando o valor 4 que está na primeira posição (posição zero)
+        valores[0];
+
+        //criando um objeto
+
+        var pessoa={
+            idade:29,
+            altura:1.75,
+            peso:85,
+            fuma:false,
+            nome:"André"
+        };
+
+        //pegando o nome do objeto
+
+        pessoa.nome;
+
+        //mudando a idade
+
+        pessoa.idade;
+
+        var pessoa={
+            iddade:29,
+            altura:1.75,
+            peso:85,
+            fuma:false,
+            nome:"André",
+            calculaICM:function(){
+                return altura*peso;
+            }
+        };
+
+        pessoa.calculaICM();
+
+        document.querySelector("h1");
+        document.querySelector(".class");
+        document.querySelector("#id");
+
+        document.querySelector("h1").textContent;
+
+        var h1=document.querySelector("h1").textContent;
+        h1.textContent="Novo título";
+        h1.id="titulo"
+
+        document.querySelector(".cartao");
+
+        //primeiro cartao
+        var cartoes=document.querySelectorAll(".cartao");
+        cartoes[0];
+
+        document.querySelector(".mural").style;
+
+        var mural=document.querySelector(".mural").style;
+
+        mural.style.flexDirection="column";
+
+        for (var i=0; i<cartoes.length;i++){
+            cartoes[i].style.flexBasis="auto";
+            cartoes[i].style.width="auto";
+            cartoes[i].style.display="block";
+        }
+
+
+        document.querySelector(".mural").classList.add("mural--linhas");
+
+       var elemento=document.querySelector(".elemento");
+       if(elemento.classList.contains("elemento")){
+           alert("Tem a classe");
+       } 
+
+
+       function alerta(){
+           alert("Fui clicado!");
+       }
+
+
+       document.querySelector("#mudaLayout").onclick=mudaLayout;
+
+       document.querySelector("#mudaLayout").addEventListener("click", function(){
+           alert("Fui clicado!");
+       })
+
+       var botoes=document.querySelectorAll(".opcoesDoCartao-remove");
+
+       for (var i=0;i<botoes.length;i++){
+           botoes[i].addEventListener("click",removeCartao);
+       }
+
+       function removeCartao(){
+           var botaoRemove=this;
+           var cartao=botaoRemove.parentNode.parentNode;
+       }
+
+
+    </script>
+</body>
+</html>
